@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/imgbackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="140dp"
+        android:text="Lauren Pharr"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_regular" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="3dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:text="How Vultures can help solve crimes"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:46"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="@dimen/text_regular"/>
+    </LinearLayout>
+
+
+</LinearLayout>
