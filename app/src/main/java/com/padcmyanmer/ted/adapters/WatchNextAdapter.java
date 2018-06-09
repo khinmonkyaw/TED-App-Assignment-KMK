@@ -5,24 +5,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.padcmyanmer.ted.R;
-import com.padcmyanmer.ted.delegates.NewsDelegate;
 import com.padcmyanmer.ted.viewholders.NewsViewHolder;
+import com.padcmyanmer.ted.viewholders.WatchNextViewHolder;
 
-public class NewsAdapter extends RecyclerView.Adapter {
-
-    private NewsDelegate mnewsDelegate;
-
-    public NewsAdapter(NewsDelegate mnewsDelegate) {
-        this.mnewsDelegate = mnewsDelegate;
-    }
-
+public class WatchNextAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view=layoutInflater.inflate(R.layout.view_holder_news1,parent,false);
-        return new NewsViewHolder(view,mnewsDelegate);
+        View view=layoutInflater.inflate(R.layout.view_holder_watch_next_list,parent,false);
+        return new WatchNextViewHolder(view);
     }
 
     @Override
@@ -32,6 +26,6 @@ public class NewsAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 3;
     }
 }

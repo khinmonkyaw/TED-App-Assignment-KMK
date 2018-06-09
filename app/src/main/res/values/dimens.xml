@@ -34,5 +34,10 @@
 
     <!-- App specific -->
     <dimen name="publication_logo_size">120dp</dimen>
+    <dimen name="news_details_appbar_height">256dp</dimen>
+    <dimen name="volume_up_width">20dp</dimen>
+    <dimen name="volume_up_height">20dp</dimen>
+    <dimen name="icon_width">30dp</dimen>
+    <dimen name="icon_height">30dp</dimen>
 
 </resources>

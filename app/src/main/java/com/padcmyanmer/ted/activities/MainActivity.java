@@ -1,5 +1,6 @@
-package com.padcmyanmer.ted;
+package com.padcmyanmer.ted.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,9 +12,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.padcmyanmer.ted.R;
 import com.padcmyanmer.ted.adapters.NewsAdapter;
+import com.padcmyanmer.ted.delegates.NewsDelegate;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NewsDelegate {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         RecyclerView rvNews = findViewById(R.id.rv_news);
-        NewsAdapter newsAdapter = new NewsAdapter();
+        NewsAdapter newsAdapter = new NewsAdapter(this);
         rvNews.setAdapter(newsAdapter);
         rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
                 LinearLayoutManager.VERTICAL,
                 false));
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,5 +66,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onTapNews() {
+        Intent intent=new Intent(MainActivity.this,NewsDetailActivity.class);
+        startActivity(intent);
     }
 }
