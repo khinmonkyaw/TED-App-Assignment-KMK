@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -14,9 +13,9 @@ import android.view.MenuItem;
 
 import com.padcmyanmer.ted.R;
 import com.padcmyanmer.ted.adapters.NewsAdapter;
-import com.padcmyanmer.ted.delegates.NewsDelegate;
+import com.padcmyanmer.ted.delegates.TalksDelegate;
 
-public class MainActivity extends AppCompatActivity implements NewsDelegate {
+public class MainActivity extends BaseActivity implements TalksDelegate {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NewsDelegate {
     }
 
     @Override
-    public void onTapNews() {
+    public void onTapTalks() {
         Intent intent=new Intent(MainActivity.this,NewsDetailActivity.class);
         startActivity(intent);
     }

@@ -9,19 +9,19 @@ import android.support.v7.widget.RecyclerView;
 import com.padcmyanmer.ted.R;
 import com.padcmyanmer.ted.adapters.WatchNextAdapter;
 
-public class NewsDetailActivity extends AppCompatActivity {
+public class NewsDetailActivity extends BaseActivity {
 
-    private RecyclerView rv_watch_next;
+    private RecyclerView rvWatchNext;
     private WatchNextAdapter watchNextAdapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_details);
-        rv_watch_next=findViewById(R.id.rv_watch_next_list);
+        rvWatchNext=findViewById(R.id.rv_watch_next_list);
         watchNextAdapter=new WatchNextAdapter();
 
-        rv_watch_next.setAdapter(watchNextAdapter);
-        rv_watch_next.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
+        rvWatchNext.setAdapter(watchNextAdapter);
+        rvWatchNext.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
                 LinearLayoutManager.VERTICAL,
                 false));
 

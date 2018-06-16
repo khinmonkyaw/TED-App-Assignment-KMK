@@ -6,14 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.padcmyanmer.ted.R;
-import com.padcmyanmer.ted.delegates.NewsDelegate;
+import com.padcmyanmer.ted.delegates.TalksDelegate;
 import com.padcmyanmer.ted.viewholders.NewsViewHolder;
 
 public class NewsAdapter extends RecyclerView.Adapter {
 
-    private NewsDelegate mnewsDelegate;
+    private TalksDelegate mnewsDelegate;
 
-    public NewsAdapter(NewsDelegate mnewsDelegate) {
+    public NewsAdapter(TalksDelegate mnewsDelegate) {
         this.mnewsDelegate = mnewsDelegate;
     }
 
